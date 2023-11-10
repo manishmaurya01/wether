@@ -1,0 +1,770 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bkg1: #686c73;
+    --bkg2: #353b48;
+    --bkg3: #0c0312b8;
+    --bkg4: #020003c6;
+    --clr1: #dcdde1;
+    --clr2: #010209;
+}
+
+body {
+    background-color: var(--bkg4);
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url("https://images.tech.co/wp-content/uploads/2015/06/weather.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.wether-wrapper {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    background-image: url("https://images.tech.co/wp-content/uploads/2015/06/weather.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.today-wether {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* To stack the sections vertically */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(7px);
+    /* Apply a blur to the background */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Add a semi-transparent background color */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.today-wether .search {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.today-wether .search #input {
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    background-color: var(--bkg3);
+    color: var(--clr1);
+
+}
+
+.today-wether .search .btn {
+    cursor: pointer;
+    width: 25%;
+    height: 90%;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: var(--bkg3);
+    color: var(--clr1);
+}
+
+.today-wether .temprature {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.today-wether .temprature .temp-num,
+.temp-icon {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-family: cursive;
+}
+
+.temp-icon img {
+    width: 70%;
+    height: 70%;
+}
+
+.today-wether .condition {
+    font-size: 16px;
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.today-wether .detail {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.inner-detail {
+    width: 80%;
+    height: 100%;
+}
+
+.today-wether .other-condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 44%;
+}
+
+.today-wether .other-condition .other-con-wrapper {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25%;
+    grid-gap: 2px;
+
+}
+
+.today-wether .other-condition p {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(114, 81, 81, 0.5);
+    color: var(--clr1);
+}
+
+.days-wether {
+    margin: 0px 10px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    /* Apply a blur to the background */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Add a semi-transparent background color */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.5);
+
+}
+
+.days-wether .days {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.days-wether .days section {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+    background-color: var(--bkg4);
+    color: var(--clr1);
+    cursor: pointer;
+}
+
+.days-wether .days section .day-num {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    padding: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.days-wether .days section .day-temp {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 30px;
+    font-family: cursive;
+
+}
+
+.d1 {
+    background: url("clear.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+
+.d2 {
+    background: url("cloud.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    /* Apply a blur to the background */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: all ease 1s;
+}
+
+.details {
+    width: 60%;
+    height: 80%;
+    background-color: var(--clr1);
+    position: relative;
+    top: 10%;
+    left: 20%;
+    transition: all ease 1s;
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--clr2);
+
+}
+
+.date-time {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.date-time button {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: var(--clr1);
+    color: var(--clr2);
+}
+
+.info {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.info p {
+    padding: 5px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.left-info {
+    width: 50%;
+    height: 100%;
+}
+
+.right-info {
+    width: 50%;
+    height: 100%;
+}
+
+
+
+
+
+/* styles.css */
+.footer {
+    position: absolute;
+    top: 590px;
+    background-color: #0b0101;
+    /* Background color for the footer */
+    color: #fff;
+    /* Text color for the footer */
+    padding: 20px;
+    /* Add some padding for spacing */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+
+
+.img {
+    width: 40%;
+    height: 100%;
+}
+
+.img img {
+    width: 30%;
+    height: 100%;
+}
+
+.content {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+/* responsive ness  */
+
+
+@media only screen and (max-width: 1000px) {
+
+    /* styles.css */
+    .footer {
+        position: absolute;
+        top: 1300px;
+        background-color: #0b0101;
+        /* Background color for the footer */
+        color: #fff;
+        /* Text color for the footer */
+        padding: 20px;
+        /* Add some padding for spacing */
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+    }
+
+
+
+    .img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .img img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .content {
+        font-size: 30px;
+    }
+
+
+
+
+    .wrapper {
+        display: unset;
+    }
+
+    .today-wether .search {
+        width: 70%;
+        height: 10%;
+
+    }
+
+    .today-wether .temprature {
+        width: 70%;
+        height: 30%;
+        border-radius: 10px;
+
+    }
+
+    .today-wether .condition {
+        font-size: 16px;
+        width: 70%;
+        height: 9%;
+
+    }
+
+    .today-wether .detail {
+        width: 70%;
+        height: 9%;
+
+    }
+
+
+    .today-wether .other-condition {
+
+        width: 70%;
+        height: 44%;
+    }
+
+    .days-wether {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+    }
+
+    .days-wether .days {
+        width: 80%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 33% 33% 33%;
+    }
+
+
+
+
+
+
+    .popup {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 100%;
+        /* display: none; */
+        transition: all ease 1s;
+    }
+
+    .details {
+        width: 90%;
+        height: 80%;
+        background-color: var(--clr1);
+        position: relative;
+        top: 10%;
+        left: 5%;
+        transition: all ease 1s;
+        border-radius: 30px;
+        padding: 10px;
+        color: var(--clr2);
+
+    }
+
+    .date-time {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .date-time button {
+        position: absolute;
+        top: 2%;
+        right: 1%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+
+    .today-wether .search {
+        height: 8%;
+    }
+
+    .today-wether .search .btn {
+        cursor: pointer;
+        width: 30%;
+        height: 70%;
+
+    }
+
+    .today-wether .search #input {
+        width: 70%;
+        height: 60%;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .today-wether .temprature {
+        width: 100%;
+        height: 20%;
+
+    }
+
+    .today-wether .temprature .temp-num,
+    .temp-icon {
+        width: 50%;
+        height: 100%;
+        font-size: 35px;
+
+    }
+
+    .temp-icon img {
+        width: 60%;
+        height: 70%;
+    }
+
+
+    .main-wrapper {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .wether-wrapper {
+        width: 90%;
+        height: 90%;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+
+    }
+
+    .today-wether {
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .today-wether .search {
+        width: 100%;
+        height: 10%;
+
+    }
+
+    .today-wether .detail {
+        width: 100%;
+        height: 10%;
+        font-size: 16px;
+    }
+
+    .inner-detail {
+        width: 100%;
+        height: 100%;
+    }
+
+    .today-wether .condition {
+        font-size: 14px;
+        width: 100%;
+        height: 10%;
+    }
+
+    .today-wether .other-condition .other-con-wrapper {
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-gap: 2px;
+
+    }
+
+    .today-wether .other-condition {
+        width: 100%;
+        height: 60%;
+    }
+
+    .today-wether .other-condition p {
+        width: 100%;
+        height: 100%;
+        padding: 1px;
+        color: var(--clr2);
+    }
+
+
+
+
+    .days-wether {
+        margin: 10px 0px;
+        width: 100%;
+        height: 1500px;
+
+    }
+
+
+
+    .days-wether .days section {
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        border: 2px solid black;
+        overflow: hidden;
+        background-color: var(--bkg4);
+        color: var(--clr1);
+        cursor: pointer;
+    }
+
+
+
+    .days-wether .days {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px;
+    }
+
+
+    .d1 {
+        background: url("clear.png");
+        background-repeat: no-repeat;
+        background-size: 25%;
+
+    }
+
+    .days-wether .days section .day-temp {
+        width: 100%;
+        height: 80%;
+        font-size: 20px;
+
+    }
+
+
+
+    .date-time button {
+        position: absolute;
+        top: 1%;
+        right: 5%;
+    }
+
+
+
+    .popup {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1px);
+        /* Apply a blur to the background */
+        background-color: unset;
+        border-radius: 20px;
+        box-shadow: unset;
+        display: none;
+        transition: all ease 1s;
+    }
+
+    .details {
+        width: 90%;
+        height: 80%;
+        background-color: var(--clr1);
+        position: relative;
+        left: 5%;
+        transition: all ease 1s;
+        border-radius: 30px;
+        padding: 10px;
+        color: var(--clr2);
+
+    }
+
+
+    /* styles.css */
+    .footer {
+        position: absolute;
+        top: 2100px;
+        background-color: #0b0101;
+        /* Background color for the footer */
+        color: #fff;
+        /* Text color for the footer */
+        padding: 20px;
+        /* Add some padding for spacing */
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+
+
+
+    .img {
+        width: 40%;
+        height: 100%;
+    }
+
+    .img img {
+        width: 60%;
+        height: 100%;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 300px) {
+
+    .today-wether .temprature .temp-num,
+    .temp-icon {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+
+
+
+
+}

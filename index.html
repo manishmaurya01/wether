@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wether app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <div class="wether-wrapper">
+            <div class="wrapper">
+
+                <div class="today-wether">
+                    <section class="search">
+                        <input type="search" placeholder="ENTER CITY NAME" id="input">
+                        <button class="btn" onclick="load()">search</button>
+                    </section>
+                    <section class="temprature">
+                        <div class="temp-num">32.1&#8451;</div>
+                        <div class="temp-icon">
+                            <img src="" id="temp-i">
+                        </div>
+                    </section>
+                    <section class="condition">
+                        <h1 class="full-add">Lunawada, gujrat India</h1>
+                    </section>
+                    <section class="detail">
+                        <div class="inner-detail">
+                            <p class="wether-detail">Cooling down with a chance of rain Friday, Saturday & Sunday.</p>
+                        </div>
+                    </section>
+                    <section class="other-condition">
+                        <div class="other-con-wrapper">
+
+                            <!-- automaticaly create elements -->
+                        </div>
+
+                    </section>
+                </div>
+                <div class="days-wether">
+                    <div class="days">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="details">
+                <div class="date-time">
+                    <h1>2023:10:18</h1>
+
+                    <button class="btn" onclick="reset()"><svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                        </svg></button>
+
+                </div>
+                <hr>
+                <div class="info">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="img">
+                <img src="manish.png" alt="">
+            </div>
+            <div class="content">
+                <p> &#169;created by manish kumar</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
